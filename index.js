@@ -1,92 +1,125 @@
 
 const name_empresa = "SUGAR PLANET"
-const SALIR = 4
-const precio = "120";
+const SALIR = 5
+const productosCargados = [
+    {
+        id:1,
+        nombre:"Ositos Acidos",
+        precio:120,
+        categoria: "Gomitas"
+    },
+    {
+        id:2,
+        nombre:"Cintitas de Frutilla",
+        precio:100,
+        categoria: "Gomitas"
+    },
+    {
+        id:3,
+        nombre:"Ferrero Rocher",
+        precio:150,
+        categoria:"Chocolates"
+    },
+    {
+        id:4,
+        nombre:"Milka Oreo relleno 300g.",
+        precio:1765,
+        categoria: "Chocolates"
+    },
+    {
+        id:5,
+        nombre:"Caramelos de Dulce de leche",
+        precio:110,
+        categoria:"Caramelos"
+    },
+    {
+        id:6,
+        nombre:"Caramelos de Chocolate",
+        precio:110,
+        categoria: "Caramelos"
+    },
+]
+const carrito= [];
+const verGomitas = () => {
+    let mensaje = "Lista de Productos: \n";
+    productosCargados.forEach(el =>{
+        if(el.categoria === "Gomitas"){
+        mensaje = mensaje + `${el.id}-${el.nombre} $${el.precio} \n`
+        }
+    })
+const opcion = parseInt(prompt(mensaje));
 
+const productoSeleccionado = productosCargados.find(producto => producto.id === opcion)
+carrito.push(productoSeleccionado)
+alert("Agregado al carrito correctamente")
+}
+const verChocolates = () => {
+    let mensaje = "Lista de Productos: \n";
+    productosCargados.forEach(el =>{
+        if(el.categoria === "Chocolates"){
+        mensaje = mensaje + `${el.id}-${el.nombre} $${el.precio} \n`
+        }
+    })
+const opcion = parseInt(prompt(mensaje));
+
+const productoSeleccionado = productosCargados.find(producto => producto.id === opcion)
+carrito.push(productoSeleccionado)
+alert("Agregado al carrito correctamente")
+}
+const verCaramelos = () => {
+    let mensaje = "Lista de Productos: \n";
+    productosCargados.forEach(el =>{
+        if(el.categoria === "Caramelos"){
+        mensaje = mensaje + `${el.id}-${el.nombre} $${el.precio} \n`
+        }
+    })
+const opcion = parseInt(prompt(mensaje));
+
+const productoSeleccionado = productosCargados.find(producto => producto.id === opcion)
+carrito.push(productoSeleccionado)
+alert("Agregado al carrito correctamente")
+}
 const saludo = alert("Bienvenidos al carrito de compras de " + name_empresa)
-//seccion gomitas acidas
-const gomitasAcidas = () => {
-    let opcion = parseInt(prompt("Ingrese el tipo de gomita, \n 1-Ositos Acidos \n 2-Cintitas Acidas \n 3-Bananitas Acidas  \n 4-Volver Atras "))
-    while(opcion != SALIR){
-        switch(opcion){
-            case 1:
-                ositosAcidos = (prompt("ingrese la cantidad deseada..."));
-                alert("solicitaste" + " " + ositosAcidos + " " + "unidades")
-                alert("el total de tu compra es de"+ " " + (ositosAcidos*precio) + " " + "pesos")
-                break;
-            case 2:
-                cintitasAcidas = (prompt("ingrese la cantidad deseada..."));
-                alert("solicitaste" + " " + cintitasAcidas + " " + "unidades")
-                alert("el total de tu compra es de"+ " " + (cintitasAcidas*precio) + " " + "pesos")
-                break;
 
-            case 3:
-                bananitasAcidas = (prompt("ingrese la cantidad deseada..."));
-                alert("solicitaste" + " " + bananitasAcidas + " " + "unidades")
-                alert("el total de tu compra es de"+ " " + (bananitasAcidas*precio) + " " + "pesos")
-                break;
+const verCarrito = () => {
+    let mensaje = "Carrito: \n";
+    const numeroCompra = Math.round(Math.random() * 10000000 + 100000)
 
-            default:
-                alert("opcion invalida, vuleva a intentarlo")
-                break;
-        }
-        opcion = parseInt(prompt("Ingrese el tipo de gomita, \n 1-Ositos Acidos \n 2-Cintitas Acidas \n 3-Bananitas Acidas  \n 4-Volver Atras "))
+    carrito.forEach(el =>{
+                        mensaje = mensaje + `${el.id}-${el.nombre} $${el.precio} \n`
+    })
+    const total = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0)
+    mensaje += `TOTAL: $${total} \n`
+    mensaje += "Desea Finalizar la Compra ? (si/no)"
+    const respuesta = prompt(mensaje);
+    if(respuesta.toLowerCase() == "si"){
+        alert("-Felicitaciones tu compra fue relizada con exito- :D \n Nro:" + numeroCompra + "\n guarda el numero para recibir el producto")
+        carrito.splice();
     }
 }
-
-
-//seccion gomitas azucaradas
-const gomitasAzucaradas = () => {
-    let opcion = parseInt(prompt("Cual te gustaria llevar?, \n 1- Ositos Azucarados \n 2- Regaliz de Frutilla \n 3-Bananitas Azucaradas  \n 4- Volver Atras "))
-    while(opcion != SALIR){
-        switch(opcion){
-            case 1:
-                ositosAzucarados = (prompt("ingrese la cantidad deseada..."));
-                alert("solicitaste" + " " + ositosAzucarados + " " + "unidades")
-                alert("el total de tu compra es de"+ " " + (ositosAzucarados*precio) + " " + "pesos")
-                break;
-
-            case 2:
-                regalizDeFrutilla = (prompt("ingrese la cantidad deseada..."));
-                alert("solicitaste" + " " + regalizDeFrutilla + " " + "unidades")
-                alert("el total de tu compra es de"+ " " + (regalizDeFrutilla*precio) + " " + "pesos")
-                break;
-
-            case 3:
-                bananitasAzucaradas = (prompt("ingrese la cantidad deseada..."));
-                alert("solicitaste" + " " + bananitasAzucaradas + " " + "unidades")
-                alert("el total de tu compra es de"+ " " + (bananitasAzucaradas*precio) + " " + "pesos")
-                break;
-
-            default:
-                alert("opcion invalida, vuleva a intentarlo")
-                break;
-        }
-        opcion = parseInt(prompt("Cual te gustaria llevar?, \n 1- Ositos Azucarados \n 2- Regaliz de Frutilla \n 3-Bananitas Azucaradas  \n 4- Volver Atras "))
-    }
-}
-
-
-//PROMP ENTRADA PRINCIPAL
-let opcion = parseInt(prompt("Ingrese la opcion que desea comprar, \n 1-Gomitas Acidas \n 2-Gomitas Azucaradas \n 3- proximamente \n 4- SALIR" ))
+let opcion = parseInt(prompt("Ingrese la opcion deseada, \n 1-Ver Gomitas \n 2-Ver Chocolates \n 3-Ver Caramelos \n 4- Ver Carrito \n 5- SALIR" ))
 while (opcion != SALIR){
     switch(opcion){
         case 1:
-            gomitasAcidas();
+            verGomitas();
             break;
 
         case 2:
-            gomitasAzucaradas();
+            verChocolates();
             break;
 
         case 3:
-            masProductos();
+            verCaramelos();
+            break;
+
+        case 4:
+            verCarrito();
             break;
 
             default:
                 alert("opcion inválida, reintenta nuevamente")
     }
-    opcion = parseInt(prompt("Ingrese la opcion que desea comprar, \n 1-Gomitas Acidas \n 2-Ositos Azucarados \n 3- Más Productos \n 4- SALIR" ))
+    opcion = parseInt(prompt("Ingrese la opcion deseada, \n 1-Ver Gomitas \n 2-Ver Chocolates \n 3-Ver Caramelos \n 4- Ver Carrito \n 5- SALIR" ))
 }
 
 alert("Gracias por elegirnos, te deseamos un dulce dia.")
