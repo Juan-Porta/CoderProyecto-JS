@@ -110,7 +110,7 @@ aside {
 .numerito {
     background-color: var(--clr-white);
     color: var(--clr-main);
-    padding: .15 .25rem;
+    padding:.25rem;
     border-radius: .25rem;
 }
 
