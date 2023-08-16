@@ -17,20 +17,20 @@
             <nav>
                 <ul class="menu">
                     <li>
-                        <button class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los pruductos</button>
+                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los pruductos</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Gomitas</button>
+                        <button id="gomitas" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Gomitas</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Chocolates</button>
+                        <button id="chocolates" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Chocolates</button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Caramelos</button>
+                        <button id="caramelos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Caramelos</button>
                     </li>
                     <li>
                         <a class="boton-menu boton-carrito" href="./carrito.html">
-                            <i class="bi bi-cart-fill"></i> Carrito <span class="numerito">0</span>
+                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
                         </a>
                     </li>
                 </ul>
@@ -40,45 +40,13 @@
             </footer>
         </aside>
         <main>
-            <h2 class="titulo-principal">Todos los productos</h2>
-            <div class="contenedor-productos">
-                <div class="producto">
-                <img class="producto-imagen" src="./img/gomitas/huevitos.jpg" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Huevitos</h3>
-                    <p class="producto-precio">$150</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-            <div class="producto">
-                <img class="producto-imagen" src="./img/gomitas/moritas.jpg" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Moritas</h3>
-                    <p class="producto-precio">$120</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-            <div class="producto">
-                <img class="producto-imagen" src="./img/gomitas/ositos.jpg" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Ositos Rellenos</h3>
-                    <p class="producto-precio">$150</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-            <div class="producto">
-                <img class="producto-imagen" src="./img/gomitas/ositosAcidos.jpg" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Ositos Acidos</h3>
-                    <p class="producto-precio">$150</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-            
+            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+
             </div>
         </main>
     </div>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
