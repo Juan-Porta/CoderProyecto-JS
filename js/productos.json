@@ -1,0 +1,124 @@
+[
+    {
+        "id": "gomita-01",
+        "titulo": "Huevitos",
+        "Imagen": "./img/gomitas/huevitos.jpg",
+        "categoria": {
+            "nombre": "Gomitas",
+            "id": "gomitas"
+        },
+        "precio": 550
+    },
+    {
+        "id": "gomita-02",
+        "titulo": "Moritas",
+        "Imagen": "./img/gomitas/moritas.jpg",
+        "categoria": {
+            "nombre": "Gomitas",
+            "id": "gomitas"
+        },
+        "precio": 520
+    },
+    {
+        "id": "gomita-03",
+        "titulo": "Ositos",
+        "Imagen": "./img/gomitas/ositos.jpg",
+        "categoria": {
+            "nombre": "Gomitas",
+            "id": "gomitas"
+        },
+        "precio": 550
+    },
+    {
+        "id": "gomita-04",
+        "titulo": "Ositos Acidos",
+        "Imagen": "./img/gomitas/ositosAcidos.jpg",
+        "categoria": {
+            "nombre": "Gomitas",
+            "id": "gomitas"
+        },
+        "precio": 550
+    },
+
+    {
+        "id": "chocolates-01",
+        "titulo": "Caja Arcor Surtidos",
+        "Imagen": "./img/chocolates/cajaArcor.jpg",
+        "categoria": {
+            "nombre": "Chocolates",
+            "id": "chocolates"
+        },
+        "precio": 1500
+    },
+    {
+        "id": "chocolates-02",
+        "titulo": "Blockazo 1 Kilo",
+        "Imagen": "./img/chocolates/Chocolate-Cofler-Blockazo-1kg.jpg",
+        "categoria": {
+            "nombre": "Chocolates",
+            "id": "chocolates"
+        },
+        "precio": 5550
+    },
+    {
+        "id": "chocolates-03",
+        "titulo": "Ferrero",
+        "Imagen": "./img/chocolates/ferrero.jpg",
+        "categoria": {
+            "nombre": "Chocolates",
+            "id": "chocolates"
+        },
+        "precio": 350
+    },
+    {
+        "id": "chocolates-04",
+        "titulo": "Vizzio Menta",
+        "Imagen": "./img/chocolates/VIZZIO-menta.jpg",
+        "categoria": {
+            "nombre": "Chocolates",
+            "id": "chocolates"
+        },
+        "precio": 350
+    },
+
+    {
+        "id": "caramelos-01",
+        "titulo": "Butter Toffes de chocolate",
+        "Imagen": "./img/caramelos/butter-toffees-chocolate.jpg",
+        "categoria": {
+            "nombre": "Caramelos",
+            "id": "caramelos"
+        },
+        "precio": 450
+    },
+    {
+        "id": "caramelos-02",
+        "titulo": "Pico dulce duro",
+        "Imagen": "./img/caramelos/caramelo-pico-dulce-duro.jpg",
+        "categoria": {
+            "nombre": "Caramelos",
+            "id": "caramelos"
+        },
+        "precio": 450
+    },
+    {
+        "id": "caramelos-03",
+        "titulo": "Bull Dog Masticable",
+        "Imagen": "./img/caramelos/caramelos-bulldog.jpg",
+        "categoria": {
+            "nombre": "Caramelos",
+            "id": "caramelos"
+        },
+        "precio": 350
+    },
+    {
+        "id": "caramelos-04",
+        "titulo": "Caramelo-Sugus-Confitados",
+        "Imagen": "./img/caramelos/Caramelos-Sugus-Confitados.jpg",
+        "categoria": {
+            "nombre": "Caramelos",
+            "id": "caramelos"
+        },
+        "precio": 450
+    }
+]
